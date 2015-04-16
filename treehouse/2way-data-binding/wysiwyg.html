@@ -1,0 +1,49 @@
+<html ng-app="treehouseCourse">
+  <head>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <style type="text/css">
+      .main, .debug {
+        width: 48%;
+      }
+
+      .main {
+        float: left;
+      }
+
+      .debug {
+        float: right;
+      }
+
+      .fields label {
+        display: block;
+        margin-bottom: 1.5em;
+        font-weight: bold;
+      }
+
+      .fields label input, .fields label select {
+        font-weight: normal;
+        margin-left: 1em;
+      }
+
+      .textarea {
+        width: 100%;
+        min-height: 250px;
+      }
+    </style>
+  </head>
+  <body ng-controller="stageTwoCtrl">
+    <div class="main">
+      <div class="textarea" ng-model="user.bio" hallo></div>
+    </div>
+    <div class="debug">
+      <pre ng-bind="user | json">
+      </pre>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="text/javascript" src="https://rangy.googlecode.com/svn/trunk/currentrelease/rangy-core.js"></script>
+    <script type="text/javascript" src="hallo.js"></script>
+    <script type="text/javascript" src="appWysiwyg.js"></script>
+  </body>
+</html>
