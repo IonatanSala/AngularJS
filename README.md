@@ -1,4 +1,3 @@
-## AngularJS
+# AngularJS
 
-### This is a repository where I learn AngularJS.
-
+In this repo I keep my angular code snippets for reference later.
