@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html ng-app="myApp">
+    <head>
+        <title>Learning Angular</title>
+        <meta name="description" content="Learning AngularJS">
+        <meta name="keywords" content="HTML, CSS, AngularJS, Javascript">
+        <meta name="author" content="">
+        <link rel="stylesheet"  href="bower_components/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body ng-controller="MainCtrl">
+        
+        <h1>{{ title }}</h1>
+
+        <ul>
+            <li ng-repeat="todo in todos"><button class="btn btn-danger" ng-click="remove(todo)"><i class="fa fa-times"></i></button>{{ todo }} </li>
+
+
+        </ul>
+
+        <label><input ng-model="newItem" class="form-control"></label>
+        <button class="btn btn-success" ng-click="add(newItem)" ng-init="0">Add Item</button>
+
+        <script src="bower_components/angularjs/angular.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

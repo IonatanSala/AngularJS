@@ -1,0 +1,31 @@
+<!doctype htmL>
+<html>
+	<head>
+		
+	</head>
+	<body ng-app="myApp">
+
+		<div ng-controller="MainController">
+			<h2>{{ title }}</h2>
+			<ul ng-repeat="per in person">
+				<li>{{ per }}</li>
+			</ul>
+		</div>
+
+		<script src="bower_components/angular/angular.js"></script>
+		<script>
+
+			angular.module("myApp",[])
+            	.controller("MainController", function($scope){
+					$scope.title = "About Me";
+					$scope.person = {
+						firstName: "Jonatan",
+						lastName: "Sala",
+						age: 20
+					};
+
+				});
+				
+		</script>
+	</body>
+</html>

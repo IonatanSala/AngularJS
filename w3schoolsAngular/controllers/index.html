@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"  ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Controllers in AngularJS</title>
+
+	<meta name="description" content="Controllers in AngualrJS">
+	<meta name="keywords" content="angularjs,contrllers">
+	<meta name="author" content="Jonatan Sala">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-controller="personCtrl">
+
+	<h2>{{ people[0].name }}</h2>
+
+	<ul>
+		<li ng-repeat="person in people">{{ person.age }}</li>
+	</ul>
+	
+	
+	<script src="ctrl.js"></script>
+</body>
+</html>

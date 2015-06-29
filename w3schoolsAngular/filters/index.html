@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"  ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Filters in AngularJS</title>
+
+	<meta name="description" content="Filters in AngualrJS">
+	<meta name="keywords" content="angularjs,filters">
+	<meta name="author" content="Jonatan Sala">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+	<!-- AngularJS filters
+	currency - Format a number to a currency format
+	filter - Select a subset f items from an array
+	lowercase - format a string to lower case
+	orderBy - orders an array by an expression
+	uppercase - Format a string to upper case -->	
+
+	<h1>{{ people[0].name | uppercase }}</h1>
+
+	<h2> {{ money[0] | currency }}</h2>
+
+	<ul>
+		<li ng-repeat="person in people | orderBy:'age'">{{person.name | lowercase}}</li>
+	</ul>
+	<script src="app.js"></script>
+	
+</body>
+</html>
+
+

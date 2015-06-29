@@ -1,0 +1,18 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI-Router</title>
+
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+  </head>
+  <body ng-app="uiRouterApp" ng-controller="myCtrl as myCtrl">
+
+    <h1>{{myCtrl.title}}</h1>
+    This is the index level
+    <div ui-view></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
