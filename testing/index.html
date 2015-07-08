@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	
+</head>
+<body onload="myFunction()">
+
+
+	<button id="button">Click Me.</button>
+
+	<div id="myDiv"></div>
+
+
+
+
+
+<script type="text/javascript">
+
+	function myFunction() {
+
+		function loadXMLDoc() {
+
+		
+			var xmlhttp= new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange=function() { 
+
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+
+				document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+
+				}
+
+			}
+			var data = {
+				number: '353834783641'
+			}
+
+			xmlhttp.open("POST","https://wesavvy.herokuapp.com/mobile/verify",true);
+			xmlhttp.send(data);
+
+		}
+
+		var button = document.getElementById('button');
+		button.addEventListener('click', loadXMLDoc);
+
+	}
+
+</script>	
+
+</body>
+</html>

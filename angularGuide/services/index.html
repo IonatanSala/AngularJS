@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learning angulrjs Services</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="MainCtrl">
+      
+      <h1>Manipulating Arrays</h1>
+      
+      <input type="text"   ng-model="element">
+      <button ng-click="add(element)">Add Element</button>
+      <br>
+      {{elements}}
+      
+      <button ng-click="remove()">Remove the last element added</button>
+      
+      <div ng-controller="AnotherCtrl" >
+      
+            <h1>Manipulating Arrays inside the Another Controller</h1>
+      
+              <input type="text"   ng-model="el">
+              <button ng-click="add(el)">Add Element</button>
+              <br>
+              {{elements}}
+
+              <button ng-click="remove()">Remove the last element added</button>
+          
+      </div>
+      
+
+  </body>
+</html>
